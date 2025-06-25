@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu bản thân</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      flex-direction: row;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 800px;
+      width: 90%;
+    }
+
+    .intro-container img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .intro-text {
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .intro-text h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #0077b6;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .intro-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="intro-container">
+    <img src="https://picsum.photos/200/300" alt="Ảnh đại diện">
+    <div class="intro-text">
+      <h2>Phương Anh</h2>
+      <p>Xin chào! Mình là sinh viên ngành Thương mại điện tử. Mình yêu thích lập trình web, thiết kế giao diện và khám phá công nghệ mới.</p>
+    </div>
+  </section>
+
+</body>
+</html>
+
+   
