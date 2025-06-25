@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu Điều Hướng</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+    }
+
+    nav {
+      background-color: #0077b6;
+      padding: 15px 20px;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 16px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover underline animation */
+    .nav-menu li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-menu li a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-menu li a:hover {
+      color: #caf0f8;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="#intro">Giới thiệu</a></li>
+      <li><a href="#subjects">Môn học</a></li>
+      <li><a href="#schedule">TKB</a></li>
+      <li><a href="#form">Đăng ký</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
