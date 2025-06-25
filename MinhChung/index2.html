@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách môn học yêu thích</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 30px;
+    }
+
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .subject-card {
+      background-color: #ffffff;
+      border: 2px solid #0077b6;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #023e8a;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .subject-card:hover {
+      transform: scale(1.03);
+      background-color: #e0f4ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📚 Danh sách môn học yêu thích</h2>
+
+  <section class="subject-grid">
+    <div class="subject-card">Lập trình Web</div>
+    <div class="subject-card">Thương mại điện tử</div>
+    <div class="subject-card">Marketing số</div>
+    <div class="subject-card">Thiết kế UI/UX</div>
+    <div class="subject-card">Cơ sở dữ liệu</div>
+    <div class="subject-card">Kinh tế số</div>
+  </section>
+
+</body>
+</html>
