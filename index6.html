@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ảnh + Mô tả</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 40px 20px;
+    }
+
+    .media-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      /* Đảo vị trí mô tả và ảnh bằng cách bật dòng dưới: */
+      /* flex-direction: row-reverse; */
+    }
+
+    .media-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .media-text {
+      flex: 1;
+    }
+
+    .media-text h2 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .media-text p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .media-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .media-container img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="media-container">
+    <img src="https://picsum.photos/200" alt="Ảnh minh họa">
+    <div class="media-text">
+      <h2>Giới thiệu ngành TMĐT</h2>
+      <p>Ngành Thương mại điện tử kết hợp giữa công nghệ và kinh doanh, giúp sinh viên làm chủ kỹ năng thiết kế website, quảng bá sản phẩm, phân tích dữ liệu và triển khai bán hàng online hiệu quả.</p>
+    </div>
+  </section>
+
+</body>
+</html>
