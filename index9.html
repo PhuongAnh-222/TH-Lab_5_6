@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chèn audio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 40px 20px;
+    }
+
+    .audio-container {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+    }
+
+    .audio-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #0077b6;
+    }
+
+    audio {
+      width: 100%;
+      outline: none;
+      border-radius: 8px;
+    }
+
+    .audio-description {
+      font-size: 15px;
+      color: #333;
+      text-align: justify;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="audio-container">
+    <h2>🎧 Giai điệu yêu thích</h2>
+    <audio controls>
+      <source src="audio-file.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ trình phát audio.
+    </audio>
+    <div class="audio-description">
+      Đây là bản nhạc mà mình thường nghe khi học hoặc làm việc. Âm thanh nhẹ nhàng, giúp tăng tập trung và giảm căng thẳng trong quá trình học tập ngành TMĐT.
+    </div>
+  </section>
+
+</body>
+</html>
