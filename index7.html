@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thư viện ảnh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Tablet: 2 cột */
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile: 1 cột */
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📸 Thư viện ảnh hoạt động</h2>
+
+  <section class="gallery">
+    <img src="https://picsum.photos/200/300" alt="Ảnh 1">
+    <img src="https://picsum.photos/200/300" alt="Ảnh 2">
+    <img src="https://picsum.photos/200/300" alt="Ảnh 3">
+    <img src="https://picsum.photos/200/300" alt="Ảnh 4">
+    <img src="https://picsum.photos/200/300" alt="Ảnh 5">
+    <img src="https://picsum.photos/200/300" alt="Ảnh 6">
+  </section>
+
+</body>
+</html>
