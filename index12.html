@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form khảo sát</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 40px 20px;
+    }
+
+    .survey-form {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .survey-form h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .options-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .options-row label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      height: 100px;
+      font-size: 14px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 12px 24px;
+      background-color: #0077b6;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #023e8a;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="survey-form">
+    <h2>📝 Khảo sát ý kiến sinh viên</h2>
+
+    <div class="form-group">
+      <label>Bạn thuộc ngành nào?</label>
+      <div class="options-row">
+        <label><input type="radio" name="nganh" value="tmdt"> TMĐT</label>
+        <label><input type="radio" name="nganh" value="cntt"> CNTT</label>
+        <label><input type="radio" name="nganh" value="marketing"> Marketing</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Những chủ đề bạn quan tâm:</label>
+      <div class="options-row">
+        <label><input type="checkbox" name="chuDe" value="web"> Web</label>
+        <label><input type="checkbox" name="chuDe" value="ux"> UX/UI</label>
+        <label><input type="checkbox" name="chuDe" value="data"> Phân tích dữ liệu</label>
+        <label><input type="checkbox" name="chuDe" value="seo"> SEO</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Ý kiến đóng góp thêm:</label>
+      <textarea placeholder="Ghi chú hoặc phản hồi..."></textarea>
+    </div>
+
+    <button type="submit">Gửi khảo sát</button>
+  </form>
+
+</body>
+</html>
