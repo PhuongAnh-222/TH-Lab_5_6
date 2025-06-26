@@ -3,72 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ảnh + Mô tả</title>
+  <title>Ảnh + Mô tả bằng Flexbox</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
       padding: 40px 20px;
+      background-color: #f0f0f0;
     }
 
-    .media-container {
+    .container {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      /* Đảo vị trí mô tả và ảnh bằng cách bật dòng dưới: */
-      /* flex-direction: row-reverse; */
-    }
-
-    .media-container img {
-      width: 300px;
-      height: auto;
+      background-color: #fff;
       border-radius: 10px;
-      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .media-text {
+    .container img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .container img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
       flex: 1;
     }
 
-    .media-text h2 {
+    .content h2 {
       color: #0077b6;
       margin-bottom: 10px;
+      transition: color 0.3s;
     }
 
-    .media-text p {
-      font-size: 16px;
-      line-height: 1.5;
+    .content h2:hover {
+      color: #023e8a;
+    }
+
+    .content p {
       color: #333;
+      line-height: 1.6;
     }
 
     @media (max-width: 768px) {
-      .media-container {
+      .container {
         flex-direction: column;
         text-align: center;
-      }
-
-      .media-container img {
-        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-  <section class="media-container">
-    <img src="https://picsum.photos/200" alt="Ảnh minh họa">
-    <div class="media-text">
-      <h2>Giới thiệu ngành TMĐT</h2>
-      <p>Ngành Thương mại điện tử kết hợp giữa công nghệ và kinh doanh, giúp sinh viên làm chủ kỹ năng thiết kế website, quảng bá sản phẩm, phân tích dữ liệu và triển khai bán hàng online hiệu quả.</p>
+  <div class="container">
+    <img src="https://picsum.photos/200/300" alt="Ảnh minh hoạ">
+    <div class="content">
+      <h2>Giới thiệu bản thân</h2>
+      <p>
+        Mình là sinh viên ngành Thương mại điện tử. <br>
+        Đam mê thiết kế, lập trình web và luôn học hỏi để nâng cao kỹ năng chuyên môn. 
+        Thích làm việc nhóm và trải nghiệm những điều mới mẻ trong môi trường công nghệ.
+      </p>
     </div>
-  </section>
+  </div>
 
 </body>
 </html>
