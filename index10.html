@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio cá nhân</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .card:hover {
+      background: #e6f7ff;
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-bottom: 1px solid #eee;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin: 10px 15px 5px;
+      color: #0077b6;
+    }
+
+    .card p {
+      margin: 0 15px 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💼 Portfolio Cá Nhân</h1>
+
+  <div class="portfolio-grid">
+    <div class="card">
+      <img src="https://i.imgur.com/OdL0XPt.jpg" alt="Dự án 1">
+      <h3>Dự án 1: Website Giới Thiệu</h3>
+      <p>Trang web đơn giản giới thiệu bản thân và các kỹ năng sử dụng HTML, CSS.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/uKQqsuA.jpg" alt="Dự án 2">
+      <h3>Dự án 2: Landing Page</h3>
+      <p>Thiết kế trang landing hiện đại với layout responsive và hiệu ứng scroll.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/IfQ0g3h.jpg" alt="Dự án 3">
+      <h3>Dự án 3: Bán hàng mini</h3>
+      <p>Trang bán hàng demo tích hợp form đặt hàng và giỏ hàng đơn giản.</p>
+    </div>
+  </div>
+
+</body>
+</html>
