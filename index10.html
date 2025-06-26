@@ -6,56 +6,65 @@
   <title>Portfolio cá nhân</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
       margin: 0;
-      padding: 40px;
+      padding: 40px 20px;
     }
 
     h1 {
       text-align: center;
-      color: #333;
-      margin-bottom: 30px;
+      color: #222;
+      margin-bottom: 40px;
     }
 
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       overflow: hidden;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     .card:hover {
-      background: #e6f7ff;
+      background: #e6f3ff;
     }
 
     .card img {
       width: 100%;
-      aspect-ratio: 16/9;
+      height: auto;
       object-fit: cover;
+      aspect-ratio: 3/2;
       transition: transform 0.3s ease;
-      border-bottom: 1px solid #eee;
     }
 
     .card:hover img {
       transform: scale(1.05);
     }
 
+    .card-content {
+      padding: 15px;
+    }
+
     .card h3 {
-      margin: 10px 15px 5px;
+      margin: 0 0 10px;
       color: #0077b6;
+      font-size: 18px;
     }
 
     .card p {
-      margin: 0 15px 15px;
+      margin: 0;
       color: #555;
+      font-size: 14px;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -65,21 +74,35 @@
 
   <div class="portfolio-grid">
     <div class="card">
-      <img src="https://i.imgur.com/OdL0XPt.jpg" alt="Dự án 1">
-      <h3>Dự án 1: Website Giới Thiệu</h3>
-      <p>Trang web đơn giản giới thiệu bản thân và các kỹ năng sử dụng HTML, CSS.</p>
+      <img src="https://picsum.photos/300/200?random=1" alt="Dự án 1">
+      <div class="card-content">
+        <h3>Website Giới Thiệu</h3>
+        <p>Trang giới thiệu cá nhân, kỹ năng và liên hệ. Thiết kế đơn giản, hiện đại.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://i.imgur.com/uKQqsuA.jpg" alt="Dự án 2">
-      <h3>Dự án 2: Landing Page</h3>
-      <p>Thiết kế trang landing hiện đại với layout responsive và hiệu ứng scroll.</p>
+      <img src="https://picsum.photos/300/200?random=2" alt="Dự án 2">
+      <div class="card-content">
+        <h3>Landing Page</h3>
+        <p>Giao diện giới thiệu sản phẩm với hiệu ứng cuộn mượt và responsive.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://i.imgur.com/IfQ0g3h.jpg" alt="Dự án 3">
-      <h3>Dự án 3: Bán hàng mini</h3>
-      <p>Trang bán hàng demo tích hợp form đặt hàng và giỏ hàng đơn giản.</p>
+      <img src="https://picsum.photos/300/200?random=3" alt="Dự án 3">
+      <div class="card-content">
+        <h3>Website Bán Hàng</h3>
+        <p>Trang web bán hàng nhỏ, có giỏ hàng và form đặt mua đơn giản.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300/200?random=4" alt="Dự án 4">
+      <div class="card-content">
+        <h3>Blog Cá Nhân</h3>
+        <p>Viết blog cá nhân về hành trình học code, có chức năng bình luận.</p>
+      </div>
     </div>
   </div>
 
