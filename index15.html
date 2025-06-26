@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Thanh Toán</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .checkout-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 900px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .form-section {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-section h3 {
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #555;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .btn-submit {
+      grid-column: 1 / -1;
+      margin-top: 20px;
+      padding: 14px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .checkout-form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form class="checkout-form">
+    <!-- Cột trái: Thông tin người nhận -->
+    <div class="form-section">
+      <h3>Thông tin người nhận</h3>
+      <div>
+        <label for="fullname">Họ và tên</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div>
+        <label for="phone">Số điện thoại</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div>
+        <label for="address">Địa chỉ giao hàng</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div>
+        <label for="note">Ghi chú (nếu có)</label>
+        <input type="text" id="note" name="note">
+      </div>
+    </div>
+
+    <!-- Cột phải: Thông tin thanh toán -->
+    <div class="form-section">
+      <h3>Thông tin thanh toán</h3>
+      <div>
+        <label for="method">Phương thức thanh toán</label>
+        <select id="method" name="method" required>
+          <option value="">-- Chọn phương thức --</option>
+          <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+          <option value="bank">Chuyển khoản ngân hàng</option>
+          <option value="momo">Ví MoMo</option>
+        </select>
+      </div>
+      <div>
+        <label for="discount">Mã giảm giá (nếu có)</label>
+        <input type="text" id="discount" name="discount">
+      </div>
+      <div>
+        <label for="total">Tổng tiền</label>
+        <input type="text" id="total" name="total" value="500,000đ" readonly>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-submit">Xác nhận và thanh toán</button>
+  </form>
+
+</body>
+</html>
