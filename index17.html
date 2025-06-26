@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông Tin Du Lịch</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    .travel-info {
+      display: flex;
+      gap: 30px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 1200px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    .travel-text, .travel-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .travel-text h2 {
+      margin-bottom: 12px;
+      color: #2c3e50;
+    }
+
+    .travel-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .travel-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .travel-info {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="travel-info">
+    <!-- Bên trái: Mô tả -->
+    <div class="travel-text">
+      <h2>Hội An – Phố Cổ Trầm Mặc</h2>
+      <p>
+        Hội An là một thành phố cổ nằm bên sông Thu Bồn, nổi tiếng với những con phố nhỏ rợp bóng đèn lồng, kiến trúc cổ kính và nét văn hóa pha trộn độc đáo giữa Việt, Hoa, Nhật và Pháp.
+      </p>
+      <p>
+        Du khách có thể dạo chơi trên phố cổ, ngắm hoàng hôn trên sông Hoài, thưởng thức đặc sản như cao lầu, bánh mì Phượng, và tham gia lễ hội thả hoa đăng vào rằm hàng tháng.
+      </p>
+    </div>
+
+    <!-- Bên phải: Ảnh hoặc Bản đồ -->
+    <div class="travel-image">
+      <img src="https://cdn.pixabay.com/photo/2022/05/25/17/24/hoi-an-7221376_1280.jpg" alt="Phố cổ Hội An">
+    </div>
+  </div>
+
+</body>
+</html>
