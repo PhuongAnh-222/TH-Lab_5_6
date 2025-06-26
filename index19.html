@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lịch Sự Kiện Tuần</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .week-calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 12px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .day {
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 10px;
+      min-height: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .day h3 {
+      text-align: center;
+      color: #007bff;
+      margin-top: 0;
+      font-size: 16px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .event {
+      background-color: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      border-radius: 6px;
+      padding: 8px;
+    }
+
+    .event-title {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .event-time {
+      font-size: 13px;
+      color: #555;
+    }
+
+    @media (max-width: 1024px) {
+      .week-calendar {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .week-calendar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📅 Lịch Sự Kiện Tuần Này</h1>
+
+  <div class="week-calendar">
+    <div class="day">
+      <h3>Thứ 2</h3>
+      <div class="event">
+        <div class="event-title">Họp marketing</div>
+        <div class="event-time">09:00 - 10:30</div>
+      </div>
+    </div>
+    <div class="day">
+      <h3>Thứ 3</h3>
+      <div class="event">
+        <div class="event-title">Đào tạo nhân sự</div>
+        <div class="event-time">14:00 - 16:00</div>
+      </div>
+    </div>
+    <div class="day">
+      <h3>Thứ 4</h3>
+    </div>
+    <div class="day">
+      <h3>Thứ 5</h3>
+      <div class="event">
+        <div class="event-title">Gặp đối tác</div>
+        <div class="event-time">13:30 - 15:30</div>
+      </div>
+      <div class="event">
+        <div class="event-title">Họp dự án A</div>
+        <div class="event-time">16:00 - 17:00</div>
+      </div>
+    </div>
+    <div class="day">
+      <h3>Thứ 6</h3>
+      <div class="event">
+        <div class="event-title">Team Building</div>
+        <div class="event-time">Cả ngày</div>
+      </div>
+    </div>
+    <div class="day">
+      <h3>Thứ 7</h3>
+      <div class="event">
+        <div class="event-title">Tham quan bảo tàng</div>
+        <div class="event-time">08:30 - 11:00</div>
+      </div>
+    </div>
+    <div class="day">
+      <h3>Chủ nhật</h3>
+      <div class="event">
+        <div class="event-title">Nghỉ ngơi</div>
+        <div class="event-time">Cả ngày</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
