@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lịch Sự Kiện Tuần</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 12px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .day-column {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .day-column h3 {
+      text-align: center;
+      margin: 0;
+      font-size: 16px;
+      color: #007bff;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+
+    .event-card {
+      background: #e3f2fd;
+      padding: 8px;
+      border-left: 4px solid #2196f3;
+      border-radius: 6px;
+    }
+
+    .event-title {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .event-time {
+      font-size: 13px;
+      color: #555;
+    }
+
+    @media (max-width: 992px) {
+      .calendar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .calendar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📅 Lịch Sự Kiện Trong Tuần</h1>
+
+  <div class="calendar">
+    <!-- Thứ 2 -->
+    <div class="day-column">
+      <h3>Thứ 2</h3>
+      <div class="event-card">
+        <div class="event-title">Họp kế hoạch</div>
+        <div class="event-time">09:00 – 10:00</div>
+      </div>
+    </div>
+
+    <!-- Thứ 3 -->
+    <div class="day-column">
+      <h3>Thứ 3</h3>
+      <div class="event-card">
+        <div class="event-title">Workshop Thiết kế</div>
+        <div class="event-time">14:00 – 16:00</div>
+      </div>
+    </div>
+
+    <!-- Thứ 4 -->
+    <div class="day-column">
+      <h3>Thứ 4</h3>
+    </div>
+
+    <!-- Thứ 5 -->
+    <div class="day-column">
+      <h3>Thứ 5</h3>
+      <div class="event-card">
+        <div class="event-title">Gặp khách hàng</div>
+        <div class="event-time">13:30 – 15:00</div>
+      </div>
+    </div>
+
+    <!-- Thứ 6 -->
+    <div class="day-column">
+      <h3>Thứ 6</h3>
+      <div class="event-card">
+        <div class="event-title">Team Building</div>
+        <div class="event-time">Cả ngày</div>
+      </div>
+    </div>
+
+    <!-- Thứ 7 -->
+    <div class="day-column">
+      <h3>Thứ 7</h3>
+      <div class="event-card">
+        <div class="event-title">Tham quan bảo tàng</div>
+        <div class="event-time">08:00 – 11:00</div>
+      </div>
+    </div>
+
+    <!-- Chủ nhật -->
+    <div class="day-column">
+      <h3>Chủ nhật</h3>
+      <div class="event-card">
+        <div class="event-title">Nghỉ ngơi</div>
+        <div class="event-time">Cả ngày</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
