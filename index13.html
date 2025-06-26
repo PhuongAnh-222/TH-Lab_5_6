@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đặt Bàn Quán Ăn</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .reservation-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .reservation-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .btn-submit {
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form class="reservation-form">
+    <h2>Đặt Bàn Quán Ăn</h2>
+    <div class="grid-container">
+      <!-- Cột trái -->
+      <div class="form-group">
+        <label for="date">Ngày</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Giờ</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <div class="form-group">
+        <label for="guests">Số người</label>
+        <select id="guests" name="guests" required>
+          <option value="">Chọn số người</option>
+          <option value="1">1 người</option>
+          <option value="2">2 người</option>
+          <option value="3">3 người</option>
+          <option value="4">4 người</option>
+          <option value="5+">5 người trở lên</option>
+        </select>
+      </div>
+
+      <!-- Cột phải -->
+      <div class="form-group full-width">
+        <label for="notes">Yêu cầu đặc biệt</label>
+        <textarea id="notes" name="notes" placeholder="Nhập yêu cầu như: phòng riêng, dị ứng thực phẩm..."></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-submit">Đặt Bàn</button>
+  </form>
+
+</body>
+</html>
